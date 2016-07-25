@@ -1,7 +1,6 @@
 require 'active_record'
 
-configure :development do
-  set :database, 'sqlite3://development.db'
+configure :development do 
   ActiveRecord::Base.establish_connection(
     adapter: 'sqlite3',
     database: 'development.db'
@@ -9,7 +8,6 @@ configure :development do
 end
 
 configure :test do
-  set :database, 'sqlite3://test.db'
   ActiveRecord::Base.establish_connection(
     adapter: 'sqlite3',
     database: 'test.db'

@@ -3,32 +3,13 @@
 <div class="col-sm-6">
   <div class="">
     <h1>Task list</h1>
-    <% @tasks.each do |task| %>
-      <div class="row">
-        <div class="col-lg-6 task-block">
-          <table style="width: 100%;">
-        <!--    <td style="width: 10%;">
-              <h5>Finished?</h5>
-              <input type="checkbox" class="task-block-checkbox" style="margin-left: 25px;margin-bottom: 10px;font-size: 200%;"   name="finished">
-            </td> -->
-            <td style="text-align: center;">
-              <h4><%= "#{task.title}" %></h4>
-            </td>
-    <!--        <td class="task-block-button-td">
-              <button class="btn btn-default task-block-button">Read</button>
-            </td>
-            <td class="task-block-button-td">
-              <button class="btn btn-default  task-block-button">Edit</button>
-            </td>
-          -->
-          </table>
-        </div>
-      </div>
-      <br>
-
-    <% end %>
+    <br>
+    
+    <br>
+    <%=  erb(:_list_tasks, :layout => false, locals: {tasks: important_tasks})   %>
+    <%=  erb(:_list_tasks, :layout => false, locals: {tasks: tasks})   %>
   </div>
-
+  <br>
   <a type="button" class="btn btn-default btn-lg circle-button" href="/add-task">
     <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
   </a>

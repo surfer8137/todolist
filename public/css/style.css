@@ -49,12 +49,26 @@ h4{
   display: block;
   padding-top: 5px;
   padding-bottom: 5px;
-  border-width: 5px;
-  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 2px;
   width: 100%;
 
   background-color: #CCCCCC;
-  border-color: #DDDDDD;
+  border-color: #AAAAAA;
+}
+
+.important-task-block{
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 2px;
+  width: 100%;
+
+  background-color: #ffff99;
+  border-color: #b3b300;
 }
 
 .task-block-button-td{

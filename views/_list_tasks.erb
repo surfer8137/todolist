@@ -1,0 +1,29 @@
+<% tasks.each do |task| %>
+  <div class="row">
+    <% if task.important %>
+    <div class="col-lg-6 important-task-block">
+    <% else %>
+    <div class="col-lg-6 task-block">
+   <% end %>
+
+      <table style="width: 100%;">
+    <!--    <td style="width: 10%;">
+          <h5>Finished?</h5>
+          <input type="checkbox" class="task-block-checkbox" style="margin-left: 25px;margin-bottom: 10px;font-size: 200%;"   name="finished">
+        </td> -->
+        <td style="text-align: center;">
+          <h4><%= "#{task.title}" %></h4>
+        </td>
+<!--        <td class="task-block-button-td">
+          <button class="btn btn-default task-block-button">Read</button>
+        </td>
+        <td class="task-block-button-td">
+          <button class="btn btn-default  task-block-button">Edit</button>
+        </td>
+      -->
+      </table>
+    </div>
+  </div>
+  <br>
+
+<% end %>

@@ -2,7 +2,62 @@ h1{
   text-align: center;
 }
 
+h4{
+  display: inline;
+}
+
+
 .circle-button{
-  border: 2px solid;
+  position: relative;;
+  margin-left: 47%;
   border-radius: 50%;
+  border: 2px solid;
+}
+
+.center-big{
+  position: relative;
+  text-align: center;
+  margin-left: 33%;
+}
+
+.center-small{
+  position: relative;;
+  text-align: center;
+  margin-left: 38%;
+}
+
+.center-date{
+  position: relative;;
+  text-align: center;
+  margin-left: 33%;
+}
+
+.center-button{
+  position: relative;;
+  text-align: center;
+  margin-left: 46%;
+}
+
+.center-button-goback{
+  position: relative;;
+  text-align: center;
+  margin-left: 45%;
+}
+
+
+.task-block{
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-width: 5px;
+  border-radius: 5px;
+  width: 100%;
+
+  background-color: #CCCCCC;
+  border-color: #DDDDDD;
+}
+
+.task-block-button-td{
+  width: 10%;
+  margin: 0 0 0 0;
 }

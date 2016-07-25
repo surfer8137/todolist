@@ -1,2 +1,2 @@
-require './event'
+require './app'
 run Sinatra::Application

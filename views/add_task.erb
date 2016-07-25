@@ -1,18 +1,35 @@
 
 <div class="col-sm-3"></div>
 <div class="col-sm-6">
-
+  <h1>Add task</h1>
   <br>
-  <form class="" action="/add-important-task" method="post">
-    <div class="input-group">
+  <form class="" action="/add-task" method="post">
+    <div class="input-group center-big">
       <label for="name">Task name</label>
-      <input type="text" name="name" id="name" class="form-control" placeholder="Name" aria-describedby="basic-addon1">
+      <input type="text" name="name" id="name" class="form-control" placeholder="Name" aria-describedby="basic-addon1" required>
     </div>
     <br>
-    <div class="input-group">
-      <label for="text">Description</label>
-      <textarea class="form-control" rows="4" name="comment" id="comment" style="resize: none;"></textarea>
+  <!--  <div class="input-group center-big">
+      <label for="text">Comment</label>
+      <textarea class="form-control" rows="4" name="comment" id="comment" placeholder="Text" style="resize: none;" required></textarea>
     </div>
+    <br>
+    <div class="input-group center-small">
+      <label for="important">Important</label>
+      <br>
+      <input type="checkbox" name="important" id="important"> Is important?</input>
+    </div>
+    <br>
+    <div class="input-group center-date ">
+      <label for="date">Limit date</label>
+      <br>
+      <input type="date" name="date" id="date" required>
+    </div>
+    <br>
+-->
+    <button type="submit" id="add" name="add" class="btn btn-default navbar-btn center-button">Add</button>
+    <br>
+    <a type="submit"class="btn btn-default navbar-btn center-button-goback" href="/">Go back</a>
 
   </form>
 </div>

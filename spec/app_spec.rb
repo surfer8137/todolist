@@ -1,28 +1,22 @@
 # spec/app_spec.rb
 require File.expand_path '../spec_helper.rb', __FILE__
 
-describe "App" do
-  it 'should allow accessing the home page' do
+describe 'App' do
+  it 'shows the add task button' do
     visit '/'
 
-    page.should have_content 'Task list'
+    expect(page).to have_link('', href: '/add-task')
   end
 
-  it 'should have a button to add tasks' do
-    visit '/add-task'
-  end
+  context 'Adding a task' do
+    it 'shows the task name on the main page' do
+      visit '/add-task'
 
-  context 'given the form to add a task on the /add-task page' do
-    it 'must have all fields filled to continue' do
-      fill_in('name', :with => 'Something') # choose radio button
-      fill_in('comment', :with => 'asdasdasd') # choose radio button
+      fill_in('name', with: 'test name')
+      click_button('add')
 
-      click_button('add') # fill text field
-
-       
+      expect(current_path).to eq('/')
+      expect(page).to have_content 'test name'
     end
   end
 end
-
-#Capybara
-#Travis

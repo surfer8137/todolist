@@ -2,20 +2,19 @@
 require 'rack/test'
 require 'rspec'
 require 'capybara/dsl'
+require 'database_cleaner'
+require './app'
 
 ENV['RACK_ENV'] = 'test'
 
-require File.expand_path '../../app.rb', __FILE__
-
-module RSpecMixin
-  include Rack::Test::Methods
-  def app() Sinatra::Application end
-end
-
-# For RSpec 2.x and 3.x
-RSpec.configure { |c| c.include RSpecMixin }
 RSpec.configure do |config|
   config.include Capybara
+  config.before do
+    DatabaseCleaner.start
+  end
+  config.after do
+    DatabaseCleaner.clean
+  end
 end
 
 Capybara.app = Sinatra::Application

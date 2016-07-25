@@ -1,17 +1,9 @@
+$LOAD_PATH << File.join(File.dirname(__FILE__), 'app')
 require 'sinatra'
-require 'active_record'
-require 'sinatra/activerecord'
 require './config/environments'
-
-ActiveRecord::Base.establish_connection(
-  :adapter => 'sqlite3',
-  :database =>  'development.db'
-)
- 
-
+require 'model/task'
 
 get '/' do
-  @important_tasks = ImportantTask.all
   @tasks = Task.all
   erb :today_tasks
 end
@@ -20,6 +12,14 @@ get '/add-task' do
   erb :add_task
 end
 
-get '/add-important-task' do
-  erb :add_important_task
+post '/add-task' do
+  task = Task.new do |task_to_add|
+    task_to_add.title = params[:name]
+    task_to_add.body = params[:comment]
+    task_to_add.finish_time = params[:date]
+    task_to_add.important = params[:important]
+    task_to_add.finished = false
+    task_to_add.save
+  end
+  redirect '/'
 end

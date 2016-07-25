@@ -2,7 +2,7 @@ h1{
   text-align: center;
   width: 100%;
 }
- 
+
 
 h4{
   display: inline;
@@ -16,7 +16,7 @@ h4{
 }
 
 .circle-button{
-  position: relative;;
+  position: relative;
   margin-left: 47%;
   border-radius: 50%;
   border: 2px solid;
@@ -25,31 +25,32 @@ h4{
 .center-big{
   position: relative;
   text-align: center;
-  margin-left: 33%;
+  width: 30%;
+  margin: auto;
 }
 
 .center-small{
   position: relative;;
   text-align: center;
-  margin-left: 38%;
+  margin: auto;
 }
 
 .center-date{
   position: relative;
   text-align: center;
-  margin-left: 33%;
+  margin: auto;
 }
 
 .center-button{
   position: relative;
   text-align: center;
-  margin-left: 46%;
+  margin-left: 47%;
 }
 
 .center-button-goback{
   position: relative;
   text-align: center;
-  margin-left: 45%;
+  margin-left: 46%;
 }
 
 

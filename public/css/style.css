@@ -2,12 +2,7 @@ h1{
   text-align: center;
   width: 100%;
 }
-
-h2{
-  display: inline;
-  text-align: center;
-  width: 100%;
-}
+ 
 
 h4{
   display: inline;
@@ -17,7 +12,7 @@ h4{
 .date-buttons{
   display: inline;
   width: 100%;
-  margin-left: 39%;
+  text-align: center;
 }
 
 .circle-button{

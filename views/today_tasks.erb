@@ -2,9 +2,8 @@
 
 <div class="col-sm-6">
   <div class="">
-    <h1>Task list</h1>
-    <br>
-    
+    <h1>Task list</h1> 
+    <h2><%= "#{month}/#{day}/#{year}" %></h2>
     <br>
     <%=  erb(:_list_tasks, :layout => false, locals: {tasks: important_tasks})   %>
     <%=  erb(:_list_tasks, :layout => false, locals: {tasks: tasks})   %>

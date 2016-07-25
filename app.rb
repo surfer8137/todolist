@@ -4,10 +4,20 @@ require './config/environments'
 require 'model/task'
 
 get '/' do
+  time = Time.new
+  day = time.day
+  month = time.month
+  year = time.year
   more_important_tasks = Task.where(important: true)
   less_important_tasks = Task.where(important: false)
 
-  erb :today_tasks, :locals => {important_tasks: more_important_tasks, tasks: less_important_tasks}
+  erb :today_tasks, :locals => {
+    important_tasks: more_important_tasks,
+    tasks: less_important_tasks,
+    day: day,
+    month: month,
+    year: year
+  }
 end
 
 get '/add-task' do

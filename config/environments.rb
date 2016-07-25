@@ -1,9 +1,19 @@
+require 'active_record'
+
 configure :development do
   set :database, 'sqlite3://development.db'
+  ActiveRecord::Base.establish_connection(
+    adapter: 'sqlite3',
+    database: 'development.db'
+  )
 end
 
 configure :test do
   set :database, 'sqlite3://test.db'
+  ActiveRecord::Base.establish_connection(
+    adapter: 'sqlite3',
+    database: 'test.db'
+  )
 end
 
 configure :production do

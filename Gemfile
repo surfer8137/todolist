@@ -6,6 +6,8 @@ gem 'activerecord'
 gem 'sinatra-activerecord'
 gem 'rake'
 gem 'travis'
+gem 'flyml', '~> 0.2.0'
+gem 'sinatra-config-file'
 
 group :development, :test do
   gem 'sqlite3'

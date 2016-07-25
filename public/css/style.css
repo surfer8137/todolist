@@ -1,11 +1,24 @@
-h1, h2{
+h1{
   text-align: center;
+  width: 100%;
+}
+
+h2{
+  display: inline;
+  text-align: center;
+  width: 100%;
 }
 
 h4{
   display: inline;
+  text-align: center;
 }
 
+.date-buttons{
+  display: inline;
+  width: 100%;
+  margin-left: 39%;
+}
 
 .circle-button{
   position: relative;;
@@ -27,19 +40,19 @@ h4{
 }
 
 .center-date{
-  position: relative;;
+  position: relative;
   text-align: center;
   margin-left: 33%;
 }
 
 .center-button{
-  position: relative;;
+  position: relative;
   text-align: center;
   margin-left: 46%;
 }
 
 .center-button-goback{
-  position: relative;;
+  position: relative;
   text-align: center;
   margin-left: 45%;
 }

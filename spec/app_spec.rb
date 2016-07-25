@@ -3,7 +3,7 @@ require File.expand_path '../spec_helper.rb', __FILE__
 
 describe 'App' do
   it 'shows the add task button' do
-    visit '/'
+    visit '/0'
 
     expect(page).to have_link('', href: '/add-task')
   end
@@ -15,7 +15,7 @@ describe 'App' do
       fill_in('name', with: 'test name')
       click_button('add')
 
-      expect(current_path).to eq('/')
+      expect(current_path).to eq('/0')
       expect(page).to have_content 'test name'
     end
   end

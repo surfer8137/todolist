@@ -17,4 +17,4 @@ RSpec.configure do |config|
   end
 end
 
-Capybara.app = Sinatra::Application
+Capybara.app = ToDoListApp

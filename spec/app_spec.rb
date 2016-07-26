@@ -1,6 +1,6 @@
 # spec/app_spec.rb
 require File.expand_path '../spec_helper.rb', __FILE__
-
+ 
 describe 'App' do
   it 'shows the add task button' do
     visit '/0'

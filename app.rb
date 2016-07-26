@@ -1,8 +1,10 @@
 $LOAD_PATH << File.join(File.dirname(__FILE__), 'app')
 require 'sinatra'
+#require './config/initializers/database'
 require './config/environments'
 require 'model/task'
 require 'date'
+
 
 class ToDoListApp < Sinatra::Base
   get '/' do

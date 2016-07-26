@@ -1,6 +1,6 @@
 require 'active_record'
 
-configure :development do 
+configure :development do
   ActiveRecord::Base.establish_connection(
     adapter: 'sqlite3',
     database: 'development.db'

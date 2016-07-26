@@ -9,6 +9,10 @@ h4{
   text-align: center;
 }
 
+a.link{
+  text-decoration: none;
+}
+
 .date-buttons{
   display: inline;
   width: 100%;

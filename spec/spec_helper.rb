@@ -1,14 +1,14 @@
-# spec/spec_helper.rb
 require 'rack/test'
 require 'rspec'
 require 'capybara/dsl'
 require 'database_cleaner'
-require './app'
 
 ENV['RACK_ENV'] = 'test'
+require './config/boot'
+require './app'
 
 RSpec.configure do |config|
-  config.include Capybara
+  config.include Capybara::DSL
   config.before do
     DatabaseCleaner.start
   end

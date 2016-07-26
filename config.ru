@@ -1,5 +1,4 @@
+require './config/boot'
 require './app'
-require './app/model/mail'
 
-Mailer.setup
 run ToDoListApp

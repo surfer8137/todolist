@@ -1,10 +1,6 @@
-$LOAD_PATH << File.join(File.dirname(__FILE__), 'app')
 require 'sinatra'
-#require './config/initializers/database'
-require './config/environments'
 require 'model/task'
 require 'date'
-
 
 class ToDoListApp < Sinatra::Base
   get '/' do
@@ -39,14 +35,18 @@ class ToDoListApp < Sinatra::Base
   end
 
   post '/add-task' do
-    task = Task.new do |task_to_add|
-      task_to_add.title = params[:name]
-      task_to_add.body = params[:comment]
-      task_to_add.finish_time = params[:date] || Date.today
-      task_to_add.important = params[:important] || false
-      task_to_add.finished = false
-      task_to_add.save
-    end
+    create_task
     redirect '/'
+  end
+
+  def create_task
+    task = Task.new(
+      title: params[:name],
+      body: params[:comment],
+      finish_time: Date.today,
+      important: false,
+      finished: false
+    )
+    task.save
   end
 end

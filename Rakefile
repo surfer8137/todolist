@@ -1,5 +1,4 @@
-require './app'
-require './config/environments'
+require './config/boot'
 require 'sinatra/activerecord/rake'
 
 begin

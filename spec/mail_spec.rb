@@ -14,7 +14,7 @@ module ToDoList
 end
 
 describe 'Mailer' do
-  it 'can send an email' do
+  xit 'can send an email' do
     mailer = spy(:mailer)
     mail = ToDoList::Mail.new(to: 'x', subject: 'y', body: 'body')
 

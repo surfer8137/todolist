@@ -8,7 +8,7 @@ class ToDoListApp < Sinatra::Base
   end
 
   get '/done' do
-    tasks = Task.where(finished: true).sort_by &:finish_time
+    tasks = Task.where(finished: true).order(finish_time: :desc)
 
     erb :done_tasks, :locals => {
       tasks: tasks
@@ -16,10 +16,8 @@ class ToDoListApp < Sinatra::Base
   end
 
   get '/todo' do
-    date =  Date.today
-
-    more_important_tasks = Task.where(important: true, finished: false).sort_by &:finish_time
-    less_important_tasks = Task.where(important: false, finished: false ).sort_by &:finish_time
+    more_important_tasks = Task.where(important: true, finished: false).order(finish_time: :desc)
+    less_important_tasks = Task.where(important: false, finished: false).order(finish_time: :desc)
 
     erb :todo_tasks, :locals => {
       important_tasks: more_important_tasks,
@@ -27,8 +25,11 @@ class ToDoListApp < Sinatra::Base
     }
   end
 
+  #slug
   get %r{/([\d]+)} do
-
+  #  erb :show_task, :locals => {
+  #    task: Task.find(params[:])
+  #  }
   end
 
   get '/add-task' do

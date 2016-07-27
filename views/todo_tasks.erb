@@ -5,14 +5,14 @@
     <h1>Tasks to do (<%= Task.all.length %>)</h1>
     <div class="date-buttons">
       <br>
-      <a type="button" class="btn btn-default center-button-taskstodo" href="/done">
+      <a type="button" id="done" class="btn btn-default center-button-taskstodo" href="/done">
         Done tasks
       </a>
     </div>
     <br>
-    <br> 
-    <%=  erb(:_list_tasks, :layout => false, locals: {tasks: important_tasks})   %>
-    <%=  erb(:_list_tasks, :layout => false, locals: {tasks: tasks})   %>
+    <br>
+    <%=  erb(:_list_todo_tasks, :layout => false, locals: {tasks: important_tasks})   %>
+    <%=  erb(:_list_todo_tasks, :layout => false, locals: {tasks: tasks})   %>
   </div>
   <br>
   <a type="button" class="btn btn-default btn-lg circle-button" href="/add-task">

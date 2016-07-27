@@ -5,24 +5,17 @@
     <% else %>
     <div class="col-lg-6 task-block">
     <% end %>
-
         <table style="width: 100%;">
-
-      <!--    <td style="width: 10%;">
-            <h5>Finished?</h5>
-            <input type="checkbox" class="task-block-checkbox" style="margin-left: 25px;margin-bottom: 10px;font-size: 200%;"   name="finished">
-          </td> -->
-          <td style="text-align: center;">
+          <td style="text-align: left;">
               <h4><%= %{#{task.title}} %> </h4>
           </td>
-
-  <!--        <td class="task-block-button-td">
-            <button class="btn btn-default task-block-button">Read</button>
+          <td style="text-align: right;">
+            <% if (Date.today <=>  task.finish_time) < 0 %>
+              <h4> <%= %{#{task.finish_time}} %> </h4>
+            <% else %>
+              <h4> <span class="label label-danger"> <%= %{#{task.finish_time}} %> </span> </h4>
+            <% end %>
           </td>
-          <td class="task-block-button-td">
-            <button class="btn btn-default  task-block-button">Edit</button>
-          </td>
-        -->
         </table>
     </div>
   </div>

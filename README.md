@@ -10,8 +10,9 @@
   -Run 'bundle install'
 <h2>Tests execution:</h2>
   -Run 'rake'
-<h2>Run the web:</h2>
+<h2>Run the webpage:</h2>
   -Run 'rackup config.ru'
 <h2>Accessing to the web page:</h2>
   -Go to your web browser
+  <br>
   -Type this url: localhost:9292

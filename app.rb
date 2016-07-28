@@ -22,8 +22,7 @@ class ToDoListApp < Sinatra::Base
 
     erb :todo_tasks, locals: {
       important_tasks: more_important_tasks,
-      tasks: less_important_tasks,
-      all_tasks: Task.pending,
+      tasks: less_important_tasks, 
       day: today
     }
   end

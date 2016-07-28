@@ -4,11 +4,10 @@ class Task < ActiveRecord::Base
   class << self
     def create_with(args)
       task = Task.new(
-        title: title(args[:title]),
+        title: args[:title],
         description: args[:description],
-        finish_time: date(args[:finish_time]),
-        important: important(args[:important]),
-        finished: false
+        finish_time: args[:finish_time],
+        important: args[:important]
       )
       task.save
     end
@@ -24,20 +23,6 @@ class Task < ActiveRecord::Base
     def finish(id)
       task = find_by(id: id)
       task.update(finished: true)
-    end
-
-    private
-
-    def title(title)
-      title || %{Task}
-    end
-
-    def date(date)
-      date || Date.today
-    end
-
-    def important(important)
-      important || false
     end
   end
 end

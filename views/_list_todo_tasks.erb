@@ -9,7 +9,7 @@
           <td style="text-align: left;">
               <h4><a href="<%= TitleParser.parse(task) %>"><%= %{#{task.title}} %></a></h4>
           </td>
-          <td style="text-align: right;">
+          <td style="text-align: right; width: 10%;">
             <% if task.finish_time.nil? %>
 
             <% elsif (day <=>  task.finish_time) < 0 %>
@@ -18,7 +18,7 @@
               <h4> <span class="label label-danger"> <%= %{#{task.finish_time}} %> </span> </h4>
             <% end %>
           </td>
-          <td style="text-align: right;">
+          <td style="text-align: right;width: 10%;">
               <a class="btn btn-default" href="/finish/<%=task.id%>" type="submit" id="finish/<%=task.id%>">Finish</a>
           </td>
 

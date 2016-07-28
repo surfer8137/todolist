@@ -2,23 +2,28 @@ require 'active_record'
 
 class Task < ActiveRecord::Base
   class << self
-    def find_with(args)
-      where(args)
-    end
-
-    def update_attributes(attributes)
-      update(attributes)
-    end
-    
     def create_with(args)
       task = Task.new(
-        title: title(args[:name]),
-        body: args[:comment],
-        finish_time: date(args[:date]),
+        title: title(args[:title]),
+        description: args[:description],
+        finish_time: date(args[:finish_time]),
         important: important(args[:important]),
         finished: false
       )
       task.save
+    end
+
+    def pending
+      where(finished: false).order(finish_time: :desc)
+    end
+
+    def done
+      where(finished: true).order(finish_time: :desc)
+    end
+
+    def finish(id)
+      task = find_by(id: id)
+      task.update(finished: true)
     end
 
     private

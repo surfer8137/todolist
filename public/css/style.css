@@ -51,6 +51,12 @@ a.link{
   margin-left: 47%;
 }
 
+.center-buttons{
+  position: relative;
+  text-align: center;
+  margin-left: 40%;
+}
+
 .center-button-goback{
   position: relative;
   text-align: center;
@@ -80,8 +86,8 @@ a.link{
   border-radius: 2px;
   width: 100%;
 
-  background-color: #ffaaaa;
-  border-color: #ff0000;
+  background-color: #d9ffb3;
+  border-color: #73e600;
 }
 
 .important-task-block{
@@ -104,4 +110,8 @@ a.link{
 
 .center-button-taskstodo{
   margin-left: 39%;
+}
+
+.modify-buttons{
+  display: inline;
 }

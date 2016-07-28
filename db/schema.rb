@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 20160722073217) do
 
   create_table "tasks", force: :cascade do |t|
     t.string   "title"
-    t.text     "body"
+    t.text     "description"
     t.date     "finish_time"
     t.boolean  "finished"
     t.boolean  "important"

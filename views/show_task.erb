@@ -11,7 +11,7 @@
     <br>
     <div class="input-group center-big">
       <label for="text">Comment</label>
-      <textarea class="form-control" rows="4" name="body" id="body" placeholder="Text" style="resize: none;"><%= "#{task.body}" %></textarea>
+      <textarea class="form-control" rows="4" name="description" id="description" placeholder="Text" style="resize: none;"><%= "#{task.description}" %></textarea>
     </div>
     <br>
     <div class="input-group center-date ">
@@ -41,7 +41,10 @@
     </div>
     <br>
     <br>
-    <button type="submit" id="modify" class="btn btn-default btn-primary navbar-btn center-button">Save</button>
+    <div class="input-group center-small">
+      <button type="submit" id="save" class="btn btn-default btn-primary navbar-btn">Save</button>
+    </div>
+
     <br>
     <a class="btn btn-default navbar-btn center-button-goback" href="/">Go back</a>
   </form>

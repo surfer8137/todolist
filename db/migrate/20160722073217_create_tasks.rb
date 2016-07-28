@@ -2,7 +2,7 @@ class CreateTasks < ActiveRecord::Migration
   def self.up
     create_table :tasks do |t|
       t.string :title
-      t.text :body
+      t.text :description
       t.date :finish_time
       t.boolean :finished
       t.boolean :important

@@ -8,7 +8,8 @@ class Task < ActiveRecord::Base
 
     def update_attributes(attributes)
       update(attributes)
-    end 
+    end
+    
     def create_with(args)
       task = Task.new(
         title: title(args[:name]),

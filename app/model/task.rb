@@ -1,5 +1,6 @@
 require 'active_record'
 
+
 class Task < ActiveRecord::Base
   class << self
     def create_with(args)
@@ -10,6 +11,7 @@ class Task < ActiveRecord::Base
         important: args[:important]
       )
       task.save
+      task
     end
 
     def pending
@@ -22,7 +24,7 @@ class Task < ActiveRecord::Base
 
     def finish(id)
       task = find_by(id: id)
-      task.update(finished: true)
+      task.update(finished: true, finished_at: Date.today)
     end
   end
 end

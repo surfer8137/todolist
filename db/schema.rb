@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20160722073217) do
     t.string   "title"
     t.text     "description"
     t.date     "finish_time"
+    t.date     "finished_at"
     t.boolean  "finished",    default: false
     t.boolean  "important",   default: false
     t.datetime "created_at"

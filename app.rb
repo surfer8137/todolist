@@ -1,6 +1,9 @@
 require 'sinatra'
 require 'model/task'
 require './lib/title_parser'
+require './lib/csv_maker'
+require './lib/csv_deleter'
+require './lib/csv_vars'
 require 'date'
 
 class ToDoListApp < Sinatra::Base
@@ -22,7 +25,7 @@ class ToDoListApp < Sinatra::Base
 
     erb :todo_tasks, locals: {
       important_tasks: more_important_tasks,
-      tasks: less_important_tasks, 
+      tasks: less_important_tasks,
       day: today
     }
   end
@@ -64,6 +67,18 @@ class ToDoListApp < Sinatra::Base
   post '/add-task' do
     Task.create_with(params)
     redirect '/'
+  end
+
+  get '/download-csv' do
+    download_csv
+  end
+
+  private
+
+  def download_csv
+    CSVMaker.make
+    send_file(CSVVars::DEFAULT_PATH, :filename => CSVVars::DEFAULT_NAME, :type => 'Application/octet-stream')
+    CSVMaker.destroy
   end
 
   def today

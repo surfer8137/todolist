@@ -6,7 +6,7 @@
             <h4><a href="<%= TitleParser.parse(task) %>"><%= %{#{task.title}} %></a></h4>
           </td>
           <td style="text-align: right;">
-              <h4> <%= %{#{task.finish_time}} %> </h4>
+              <h4> <%= %{#{(Date.strptime(task.created_at.to_s, '%Y-%m-%d')-Date.strptime(task.finished_at.to_s, '%Y-%m-%d')).to_i}}%> day/s </h4>
           </td>
         </table>
     </div>

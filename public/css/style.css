@@ -71,6 +71,19 @@ a.link{
   border-color: #AAAAAA;
 }
 
+.finished-task-block{
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 2px;
+  width: 100%;
+
+  background-color: #ffaaaa;
+  border-color: #ff0000;
+}
+
 .important-task-block{
   display: block;
   padding-top: 5px;

@@ -4,7 +4,6 @@ require './app/model/mail'
 module ToDoList
   class Mail
     def initialize(args)
-
     end
 
     def send_with(mailer)

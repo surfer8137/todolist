@@ -1,0 +1,50 @@
+<div class="col-sm-3"></div>
+
+<div class="col-sm-6">
+  <h1><%= task.title %></h1>
+  <br>
+  <form action="<%= TitleParser.parse(task) %>" method="post">
+    <div class="input-group center-big">
+      <label for="name">Task name</label>
+      <input type="text" name="title" id="title" value="<%= "#{task.title}" %>" class="form-control" placeholder="Name" aria-describedby="basic-addon1" required>
+    </div>
+    <br>
+    <div class="input-group center-big">
+      <label for="text">Comment</label>
+      <textarea class="form-control" rows="4" name="body" id="body" placeholder="Text" style="resize: none;"><%= "#{task.body}" %></textarea>
+    </div>
+    <br>
+    <div class="input-group center-date ">
+      <label for="date">Limit date</label>
+      <br>
+      <input type="date" name="finish_time" id="finish_time" value="<%= "#{task.finish_time}" %>">
+    </div>
+    <br>
+    <div class="input-group center-small">
+      <label for="important">Important</label>
+      <br>
+      <% if task.important%>
+      <input type="checkbox" name="important" id="important" checked> Is important?</input>
+      <% else %>
+      <input type="checkbox" name="important" id="important" > Is important?</input>
+      <% end %>
+    </div>
+    <br>
+    <div class="input-group center-small">
+      <label for="finished">Finished</label>
+      <br>
+      <% if task.finished%>
+      <input type="checkbox" name="finished" id="finished" checked> Finished?</input>
+      <% else %>
+      <input type="checkbox" name="finished" id="finished"> Finished?</input>
+      <% end %>
+    </div>
+    <br>
+    <br>
+    <button type="submit" id="modify" class="btn btn-default btn-primary navbar-btn center-button">Save</button>
+    <br>
+    <a class="btn btn-default navbar-btn center-button-goback" href="/">Go back</a>
+  </form>
+</div>
+
+<div class="col-sm-3"></div>

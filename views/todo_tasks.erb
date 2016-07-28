@@ -2,7 +2,7 @@
 
 <div class="col-sm-6">
   <div class="">
-    <h1>Tasks to do (<%= Task.all.length %>)</h1>
+    <h1>Tasks to do</h1>
     <div class="date-buttons">
       <br>
       <a type="button" id="done" class="btn btn-default center-button-taskstodo" href="/done">
@@ -11,8 +11,8 @@
     </div>
     <br>
     <br>
-    <%=  erb(:_list_todo_tasks, :layout => false, locals: {tasks: important_tasks})   %>
-    <%=  erb(:_list_todo_tasks, :layout => false, locals: {tasks: tasks})   %>
+    <%=  erb(:_list_todo_tasks, :layout => false, locals: {tasks: important_tasks, day: today})   %>
+    <%=  erb(:_list_todo_tasks, :layout => false, locals: {tasks: tasks, day: today})   %>
   </div>
   <br>
   <a type="button" class="btn btn-default btn-lg circle-button" href="/add-task">

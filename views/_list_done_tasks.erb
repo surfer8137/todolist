@@ -1,20 +1,12 @@
 <% tasks.each do |task| %>
   <div class="row">
-    <% if task.important %>
-    <div class="col-lg-6 important-task-block" >
-    <% else %>
-    <div class="col-lg-6 task-block">
-    <% end %>
+    <div class="col-lg-6 finished-task-block" >
         <table style="width: 100%;">
           <td style="text-align: left;">
-              <h4><%= %{#{task.title}} %> </h4>
+            <h4><a href="<%= TitleParser.parse(task) %>"><%= %{#{task.title}} %></a></h4>
           </td>
           <td style="text-align: right;">
-            <% if (Date.today <=>  task.finish_time) < 0 %>
               <h4> <%= %{#{task.finish_time}} %> </h4>
-            <% else %>
-              <h4> <span class="label label-danger"> <%= %{#{task.finish_time}} %> </span> </h4>
-            <% end %>
           </td>
         </table>
     </div>

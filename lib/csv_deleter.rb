@@ -1,5 +1,5 @@
 require './lib/csv_vars'
-require 'FileUtils'
+require 'fileutils'
 
 class CSVDeleter
   class << self

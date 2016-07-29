@@ -78,7 +78,7 @@ class ToDoListApp < Sinatra::Base
   def download_csv
     CSVMaker.make
     send_file(CSVVars::DEFAULT_PATH, :filename => CSVVars::DEFAULT_NAME, :type => 'Application/octet-stream')
-    CSVMaker.destroy
+    CSVDeleter.delete
   end
 
   def today

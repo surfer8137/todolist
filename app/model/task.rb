@@ -1,6 +1,5 @@
 require 'active_record'
 
-
 class Task < ActiveRecord::Base
   class << self
     def create_with(args)

@@ -10,6 +10,8 @@ gem 'travis'
 gem 'flyml', '~> 0.2.0'
 gem 'sinatra-config-file'
 gem 'pony'
+gem 'rufus-scheduler'
+gem 'byebug'
 
 group :development, :test do
   gem 'sqlite3'

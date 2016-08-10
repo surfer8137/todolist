@@ -6,7 +6,17 @@ require './lib/csv_deleter'
 require './lib/csv_vars'
 require './lib/email'
 require './lib/mail_sender'
+require './lib/task_mail_builder'
+require './lib/task_mailer'
+require 'rufus-scheduler'
 require 'date'
+
+scheduler = Rufus::Scheduler.new
+
+scheduler.cron '0 0 * * *' do
+  puts "[#{Date.today}] Sending mail"
+  TaskMailer.send_mails
+end
 
 class ToDoListApp < Sinatra::Base
   get '/' do

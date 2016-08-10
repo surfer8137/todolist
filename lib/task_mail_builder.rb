@@ -2,7 +2,7 @@ class TaskMailBuilder
   class << self
     def build
       tasks = 'These are the tasks that finish today:'
-      Task.pending.each { |task| tasks += "\n-#{task.title}"}
+      Task.pending.each { |task| tasks += "\n-#{task.title}" if task.finish_time == Date.today}
 
       AppFramework::Email.new(
         to: 'angel.sanchez@peertransfer.com',

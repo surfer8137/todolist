@@ -4,6 +4,8 @@ require './lib/title_parser'
 require './lib/csv_maker'
 require './lib/csv_deleter'
 require './lib/csv_vars'
+require './lib/email'
+require './lib/mail_sender'
 require 'date'
 
 class ToDoListApp < Sinatra::Base

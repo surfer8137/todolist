@@ -1,7 +1,6 @@
 <h1>TO DO LIST Application</h1>
 
 [![Build Status](https://travis-ci.org/surfer8137/todolist.svg?branch=master)](https://travis-ci.org/surfer8137/todolist)
-
 [![Code Climate](https://codeclimate.com/github/surfer8137/todolist/badges/gpa.svg)](https://codeclimate.com/github/surfer8137/todolist)
 [![Test Coverage](https://codeclimate.com/github/surfer8137/todolist/badges/coverage.svg)](https://codeclimate.com/github/surfer8137/todolist/coverage)
 [![Issue Count](https://codeclimate.com/github/surfer8137/todolist/badges/issue_count.svg)](https://codeclimate.com/github/surfer8137/todolist)
